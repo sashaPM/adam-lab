@@ -1,0 +1,23 @@
+apiVersion: appdynamics.com/v1alpha1
+kind: Clusteragent
+metadata:
+  name: k8s-cluster-agent
+  namespace: appdynamics
+spec:
+  controllerUrl: "http://4511controllernoss-auto-dp0309se.srv.ravcloud.com:8090"
+  image: "docker.io/appdynamics/cluster-agent:preview-0.3.0"
+  logLevel: "info"
+  instrumentationMethod: "mountEnv"	  
+  appName: "KubeAgent" 
+  appNameLiteral: "JavaApp"
+  netVizPort: 3892 
+  instrumentRule:
+  - namespaces:
+    - dev    
+    method: mountEnv
+    matchString:
+    - ai
+    - world
+    - loan
+    - player
+    - api
