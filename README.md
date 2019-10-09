@@ -1,11 +1,5 @@
 # adam-lab
 	
-Create namespace `dev`:
-> $ kubectl create ns dev
-
-Deploy uninstrumented application into the namespace:
-
-> $ kubectl -n dev apply -f demoapp/
 
 Create namespace `appdynamics`
 
@@ -32,5 +26,14 @@ Deploy infrastructure visibility. Update the controller Url and the account info
 
 Deploy ADAM. Update the controller Url in adam.yaml.
 > $ kubectl -n appdynamics apply -f adam.yaml
+
+
+Create namespace `dev`:
+> $ kubectl create ns dev
+
+Deploy uninstrumented application into the namespace:
+
+> $ kubectl -n dev apply -f demoapp/
+
 
 
