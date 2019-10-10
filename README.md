@@ -3,7 +3,7 @@
 
 Create namespace `appdynamics`
 
-> $ kubectl create ns appdynamics:
+> $ kubectl create ns appdynamics
 
 Create user account in AppD as descirbed [here](https://github.com/Appdynamics/cluster-agent/blob/master/docs/rest-user-role.md)
 

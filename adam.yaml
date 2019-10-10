@@ -10,7 +10,8 @@ spec:
   instrumentationMethod: "mountEnv"	  
   appName: "KubeAgent" 
   appNameLiteral: "JavaApp"
-  netVizPort: 3892 
+  netVizPort: 3892
+  biqService: "proxy"
   instrumentRule:
   - namespaces:
     - dev    
