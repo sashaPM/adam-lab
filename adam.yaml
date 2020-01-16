@@ -1,17 +1,19 @@
 apiVersion: appdynamics.com/v1alpha1
-kind: Clusteragent
+kind: Adam
 metadata:
-  name: k8s-cluster-agent
-  namespace: appdynamics
+  name: app-viz
 spec:
-  controllerUrl: "http://4511controllernoss-auto-dp0309se.srv.ravcloud.com:8090"
-  image: "docker.io/appdynamics/cluster-agent:preview-0.3.0"
+  controllerUrl: "https://saas.appdynamics.com"
+  image: "docker.io/appdynamics/cluster-agent:preview-0.3.1"
   logLevel: "info"
-  instrumentationMethod: "mountEnv"	  
-  appName: "KubeAgent" 
+  instrumentationMethod: "mountEnv"
+  nsToInstrument:
+  - dev 
+  appName: "AppViz" 
   appNameLiteral: "JavaApp"
   netVizPort: 3892
   biqService: "proxy"
+  appDJavaAttachImage: "docker.io/appdynamics/java-agent:latest"
   instrumentRule:
   - namespaces:
     - dev    

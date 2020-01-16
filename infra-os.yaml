@@ -1,0 +1,13 @@
+apiVersion: appdynamics.com/v1alpha1
+kind: InfraViz
+metadata:
+  name: appd-infraviz
+  namespace: appdynamics
+spec:
+  controllerUrl: "https://syd-p-con-109.saas.appdynamics.com"
+  image: "docker.io/appdynamics/machine-agent-analytics:latest"
+  account: "customer2"
+  globalAccount: "customer2_f48ef359-59fa-4cf2-a798-314e2e040de7"
+  enableDockerViz: "false"
+  enableMasters: true
+  stdoutLogging: true

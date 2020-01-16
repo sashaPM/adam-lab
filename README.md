@@ -1,5 +1,7 @@
 # adam-lab
-	
+
+Prerequisites.
+A working Kubernetes/OpenShift cluster and access to an AppDynamics controller.
 
 Create namespace `appdynamics`
 
